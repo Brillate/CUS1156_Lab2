@@ -11,14 +11,27 @@ public class UniqueWords
    {
 	  int count = 0;
 	  
-      for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
-		 {
-			
-		 }
-      }
+	  for (int i = 0; i < list.size(); i++)
+	  {
+		  boolean isUnique = true;
+		  
+		  // Checks for all previous elements
+		  for (int j = 0; j < i; j++)
+		  {
+			  isUnique = false;
+			  break;
+		  }
+		  
+		  // If we don't find a match with a previous element, we increment
+		  if (isUnique)
+		  {
+			  count++;
+		  }
+	  }
+	  
 	  return count;
    }
+
 
    public static void main(String[] args)
    {
